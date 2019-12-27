@@ -76,22 +76,7 @@
 
             </form>
       </div>
-                                 <!-- <?php 
-                                if(isset($_GET['cari'])){
-  $koneksi=mysql_connect("localhost","root","","db_mamij1");  
-  $cari = $_GET['cari'];
-  $sql = "select *from produk where nama_produk like '%".$cari."%'";
-  $result =mysql_query($sql)
-  if(mysql_num_rows($result)>0){
-  }else{
-    while($row =mysql_fetch_array($query)){
-      $nama_produk  =$row['nama_produk'];
-      $id_produk=$row['id_produk'];
-    }
-  }
-}         
-		 
-  ?> -->
+                                 
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
