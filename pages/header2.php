@@ -28,25 +28,29 @@
   </head>
   <body class="goto-here">
 		<div class="py-1 bg-primary">
-    	<div class="container">
-    		<div class="row no-gutters d-flex align-items-start align-items-center px-md-0">
-	    		<div class="col-lg-12 d-block">
-		    		<div class="row d-flex">
-		    			<div class="col-md pr-4 d-flex topper align-items-center">
-					    	<div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
-						    <span class="text">+6285600000000</span>
-					    </div>
-					    <div class="col-md pr-4 d-flex topper align-items-center">
-					    	<div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
-						    <span class="text">mamij_polije@gmail.com</span>
-					    </div>
-					    <div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right">
-						    <span class="text"></span>
-					    </div>
-				    </div>
-			    </div>
-		    </div>
-		  </div>
+      <div class="container">
+        <div class="row no-gutters d-flex align-items-start align-items-center px-md-0">
+          <div class="col-lg-12 d-block">
+            <div class="row d-flex">
+              <div class="col-md pr-4 d-flex topper align-items-center">
+                <div class="icon mr-2 d-flex justify-content-center align-items-center"></div>
+                <div id="welcomeLine" class="row">
+                  <div class="span6">Welcome!
+                    <?php if (empty($_SESSION['user'])): ?>
+                   user
+                    <?php elseif (isset($_SESSION['user'])): ?>
+                    <strong> <h7><?php echo $_SESSION['user']['username']; ?></h7></strong> <a href="logout.php" class="btn-danger btn-md">Logout</a>
+                    <?php endif ?>
+                  </div>
+                   <div class="span6">
+  
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
@@ -57,21 +61,26 @@
 	      </button>
 		<div class="form-inline navbar-search">
 			<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="GET">
-			<input class="srchTxt" style=" " type="text" name="q" placeholder="Mau Belanja Apa Hari ini?" value="<?php $q = isset($_REQUEST['q']) ? urldecode($_REQUEST['q']) : ''; echo $q ?>"/>
+			<input class="srchTxt" style="width:350px" type="text" name="q" placeholder="Mau Belanja Apa Hari ini?" value="<?php $q = isset($_REQUEST['q']) ? urldecode($_REQUEST['q']) : ''; echo $q ?>"/>
                                 <?php
                                 if ($q <> '')
                                 {
                                 ?>
-                                <a href="<?php echo $_SERVER['PHP_SELF'] ?>"><span class="btn btn-medium btn-default"><i class="icon-refresh"></i></span></a>
+                          
                                 <?php
                                 }
                                 ?>
-                                 <button type="submit" id="submit" class="btn btn-primary">Search!</button>
-                                 <a href="kategorisayuran.php"></a> 
+                                 <button type="submit" id="submit" class="btn btn-primary"><i class="icon-search"></i></button>
+
+            </form>
+      </div>
+                                 <?php 
+                                if(isset($_GET['q'])){
+  $cari = $_GET['q'];
+  $data = mysqli_query("select * from produk where nama_produk like '%".$cari."%'");       
+}
 		 
-    </form>
-      
-   </div>
+  ?>
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
@@ -89,17 +98,24 @@
                 <a class="dropdown-item" href="checkout.html">Checkout</a>
               </div> -->
             <!-- </li> -->
-	          <li class="nav-item"><a href="logout.php" class="nav-link">Logout</a></li>
+	          <!-- <li class="nav-item"><a href="logout.php" class="nav-link">Logout</a></li> -->
 	          <!-- <li class="nav-item"><a href="cart.php" class="nav-link">Checkout</a></li> -->
-	          <li class="nav-item"><a href="about.php" class="nav-link">About Me</a></li>
-	          <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
-	          <li class="nav-item cta cta-colored"><a href="cart.php" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
+	          <!-- <li class="nav-item"><a href="about.php" class="nav-link">About Me</a></li> -->
+	          <li class="nav-item"><a href="contact.php" class="nav-link">Kontak</a></li>
+            <li class="nav-item cta cta-colored"><a href="cart.php" class="nav-link"><span class="icon-shopping_cart"></span>[<?php if (empty($_SESSION["cart"]) OR !isset($_SESSION["cart"])) {
+          echo 0;
 
+        }elseif (isset($_SESSION["cart"])) {
+           echo count($_SESSION["cart"]);
+        } 
+        ?>]</a></li>
 	        </ul>
 	      </div>
 	    </div>
 	  </nav>
     <!-- END nav -->
+
+    
 
     <section id="home-section" class="hero">
 		  <div class="home-slider owl-carousel">
@@ -178,7 +194,7 @@
               </div>
               <div class="media-body">
                 <h3 class="heading">Support</h3>
-                <span>Support By Politeknik Negeri Jember dan Bootstrap</span>
+                <span>Support By Politeknik Negeri Jember </span>
               </div>
             </div>      
           </div>
