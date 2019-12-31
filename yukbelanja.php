@@ -29,29 +29,16 @@ $koneksi = new mysqli("localhost","root","","db_mamij1");
             <div class="row justify-content-center">
                 <div class="col-md-10 mb-5 text-center">
                     <ul class="product-category">
-                      <!-- <ul id="sideManu" class="nav nav-tabs nav-stacked"> -->
-      <!-- <?php $ambil = $koneksi->query("SELECT * FROM kategori"); ?>
-      
-      
-      
-      <li class="product-category"><a> </a>
+                        <!-- <li><a href="" class="active">All</a></li> -->
+                     <?php $ambil = $koneksi->query("SELECT * FROM kategori"); ?>
         <?php while($perproduk=$ambil->fetch_assoc()) { ?>
-        <ul>
-        <li>
+    
           <a class="active" href="yukbelanja.php?id=<?php echo $perproduk['id_kategori']; ?>" name="">
           <i class="icon-chevron-right"></i>
           <?php echo $perproduk['kategori']; ?>
           </a>
-        </li>
-        </ul>
         <?php } ?>
-
-      </li>    -->
-                        <!-- <li><a href="" class="active">All</a></li> -->
-                        <li><a href="kategorisayuran.php">Sayuran</a></li>
-                        <li><a href="kategoribuah.php">Buah</a></li>
-                        <li><a href="kategoriminuman.php">Minuman</a></li>
-                        <li><a href="kategoriroti.php">Roti SIP</a></li>
+   
                     </ul>
                 </div>
             </div>
