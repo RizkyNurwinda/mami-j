@@ -169,66 +169,66 @@ $detail = $ambil->fetch_assoc();
    
    <br>
    <br>
-	  <div class="container-fluid">
+    <div class="container-fluid">
     <div class="row">
-    		<div class="hero-unit" style="margin-left: 100px;">	  
-			<!-- <div class="span6"> -->
-				 <img src="baradmin/foto_produk/<?= $detail['foto_produk'] ?>" class="img-responsive" width="500">
-			</div>
+        <div class="hero-unit" style="margin-left: 100px;">   
+      <!-- <div class="span6"> -->
+         <img src="baradmin/foto_produk/<?= $detail['foto_produk'] ?>" class="img-responsive" width="500">
+      </div>
 
-			
+      
 
-			<div class="span3">
-				<div class="hero-unit" style="margin-left: 100px;">
-				<h3><?php echo $detail["nama_produk"] ?>  </h3>
-				<h4>Rp. <?php echo number_format($detail["harga_produk"]); ?></h4>
-					
-				
-				<form method="post">
-				<div class="form-group">
-					<div class="input-group">
-						<input type="number" min="1" class="form-control" placeholder="Masukkan jumlah item " name="jumlah">
-						</div> 
-						<br>
-						<div class="input-group-btn">
-							<button class="btn btn-primary" name="beli">Beli</button>
-						</div>
-					</div>
-				</div>
-				</form>
-				<?php 
-				if (isset($_POST["beli"])) 
-				{
-					
-					$jumlah	= $_POST["jumlah"];
-					if (empty($jumlah)) {
-						$jumlah=1;
-					}
-				$_SESSION["cart"]["$id_produk"] = $_SESSION["cart"]["$id_produk"] +$jumlah;
-				
-				echo "<script>alert('produk sudah masuk dikeranjang');</script>";
-				echo "<script>location='cart.php'</script>";
-				}
+      <div class="span3">
+        <div class="hero-unit" style="margin-left: 100px;">
+        <h3><?php echo $detail["nama_produk"] ?>  </h3>
+        <h4>Rp. <?php echo number_format($detail["harga_produk"]); ?></h4>
+          
+        
+        <form method="post">
+        <div class="form-group">
+          <div class="input-group">
+            <input type="number" min="1" class="form-control" placeholder="Masukkan jumlah item " name="jumlah">
+            </div> 
+            <br>
+            <div class="input-group-btn">
+              <button class="btn btn-primary" name="beli">Beli</button>
+            </div>
+          </div>
+        </div>
+        </form>
+        <?php 
+        if (isset($_POST["beli"])) 
+        {
+          
+          $jumlah = $_POST["jumlah"];
+          if (empty($jumlah)) {
+            $jumlah=1;
+          }
+        $_SESSION["cart"]["$id_produk"] = $_SESSION["cart"]["$id_produk"] +$jumlah;
+        
+        echo "<script>alert('produk sudah masuk dikeranjang');</script>";
+        echo "<script>location='cart.php'</script>";
+        }
 
-				 ?>
-			</div>
+         ?>
+      </div>
 
     <div class="hero-unit" style="margin-left: 200px;">
-			<div class="span3" >
+      <div class="span3" >
 
-				<h5>Deskripsi</h5>
-				<hr class="soft clr"/>
-				
-				<p><?php echo $detail["deskripsi"];?></p>
-				
-			</div>
-				  <div class="row"></div>
-		
-				
-		
+        <h5>Deskripsi</h5>
+        <hr class="soft clr"/>
+        
+        <p><?php echo $detail["deskripsi"];?></p>
+        
+      </div>
+          <div class="row"></div>
+    
+        
+    
 
-	</div>
-	<div class="row" style="height: 85px;"></div>
+  </div>
+  <div class="row" style="height: 85px;"></div>
 </div>
 </div>
 
