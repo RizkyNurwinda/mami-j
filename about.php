@@ -243,7 +243,7 @@ include 'koneksi.php';
             <div class="pb-md-5">
               <p>MAMI-J merupakan e-commerce penjualan.</p>
               <p>MAMI-J melayani order delivery berbagai macam kebutuhan pangan seperti sayuran, buah buahan, susu dan Roti SIP yang tentunya merupakan asli produksi dari beberapa Jurusan yang ada di Politeknik negeri Jember yaitu Jurusan Pertanian dan Peternakan. Kami menawarkan olahan produk yang masih fresh dan tentunya dengan harga yang terjangkau dan barang yang dibeli bisa diantar oleh kurir MAMI-J. </p>
-              <p><a href="yukbelanjaftfttft.php" class="btn btn-primary">Yuk Belanja</a></p>
+              <p><a href="yukbelanja.php" class="btn btn-primary">Yuk Belanja</a></p>
             </div>
           </div>
         </div>
