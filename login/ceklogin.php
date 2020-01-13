@@ -1,6 +1,6 @@
 <?php
 session_start(); //mengawali session
-include "Koneksi.php"; //menghubungkan dg koneksi
+include "koneksi.php"; //menghubungkan dg koneksi
 $error = '';
     if (isset($_POST['submit'])) { 
         $username = $_POST["username"];
