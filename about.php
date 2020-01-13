@@ -186,8 +186,8 @@ include 'koneksi.php';
                 <span class="flaticon-shipped"></span>
               </div>
               <div class="media-body">
-                <h3 class="heading">Pembayaran COD</h3>
-                <span>Hanya 5000 Tunggu di Rumah</span>
+                <h3 class="heading">Ongkos Kirim Murah</h3>
+                <span>Hanya 5000 untuk sekali Antar</span>
               </div>
             </div>      
           </div>
@@ -231,7 +231,7 @@ include 'koneksi.php';
     <section class="ftco-section ftco-no-pb ftco-no-pt bg-light">
       <div class="container">
         <div class="row">
-          <div class="col-md-5 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="margin-left: 100px;">
+          <div class="col-md-5 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/about.jpg);">
             
           </div>
           <div class="col-md-7 py-5 wrap-about pb-md-5 ftco-animate">
