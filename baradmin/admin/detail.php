@@ -66,6 +66,7 @@ $id_pembelian = $_GET['id'];
 $ambil = $koneksi->query("SELECT * FROM pembelian JOIN user ON pembelian.id_user=user.id_user WHERE pembelian.id_pembelian='$_GET[id]'"); 
 $detail=$ambil->fetch_assoc();
   ?>
+   
   
 
 <!-- echo "<pre>";
@@ -74,6 +75,9 @@ $detail=$ambil->fetch_assoc();
 <div class="row">
   <div class="col-md-6">
 <table class="table">
+
+	
+
 
       <tr>
         <th>Nama</th>
@@ -141,7 +145,7 @@ if(isset($_POST['update'])){
 
   </div>
   
-</div>
+</div> 
 <br>
 <br>
 <hr>
@@ -195,7 +199,7 @@ if(isset($_POST['update'])){
   </tfoot>
 </table>
 
-
+ <a href="notaadmin.php?id=<?php echo $detail['id_pembelian']; ?>" class="btn-danger btn"><i class="glyphicon glyphicon-remove"></i>Versi Cetak</a>
  </div>
                             </div>
                         </div>
