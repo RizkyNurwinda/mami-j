@@ -5,7 +5,7 @@ include 'koneksi.php';
 if (!isset($_SESSION["user"])) 
 {
 	echo "<script>alert('Silahkan login');</script>";
-	echo "<script>location='login.php';</script>";
+	echo "<script>location='login/index.php';</script>";
 }
 if (empty($_SESSION["cart"]) OR !isset($_SESSION["cart"])) 
 {
