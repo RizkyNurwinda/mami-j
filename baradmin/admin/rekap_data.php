@@ -67,7 +67,7 @@ include 'koneksi.php';
 <br>
   <h2 class="title-1">LAPORAN PEMBELIAN</h2>
 <form method="get" action="">
-        <label>Filter Berdasarkan</label><br>
+       <!--  <label>Filter Berdasarkan</label><br>
         <select name="filter" id="filter">
             <option value="">Pilih</option>
             <option value="1">Per Tanggal</option>
@@ -121,7 +121,7 @@ include 'koneksi.php';
            <button class="btn btn-primary" type="submit"><i class="glyphicon glyphicon-floppy-disk"></i> Tampilkan</button>
         <a href="rekap_data.php">Reset Filter</a>
     </form>
-     <hr />
+     <hr /> -->
 
     <?php
     if(isset($_GET['filter']) && ! empty($_GET['filter'])){ // Cek apakah user telah memilih filter dan klik tombol tampilkan
