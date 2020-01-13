@@ -186,8 +186,8 @@ include 'koneksi.php';
                 <span class="flaticon-shipped"></span>
               </div>
               <div class="media-body">
-                <h3 class="heading">Ongkos Kirim Murah</h3>
-                <span>Hanya 5000 untuk sekali Antar</span>
+                 <h3 class="heading">Pembayaran COD</h3>
+                <span>Hanya 5000 Tunggu di Rumah</span>
               </div>
             </div>      
           </div>

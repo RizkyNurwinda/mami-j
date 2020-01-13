@@ -19,17 +19,17 @@ $error = '';
                 $_SESSION['akses'] = $akun['id_akses']; //check kesekuaian akses dg session
 
                 if($akun['id_akses']=="1"){
-                    header("location:/bismillahok/baradmin/admin/index.php"); //lokasi target jika berhasil login
+                    header("location:/mami-j/baradmin/admin/index.php"); //lokasi target jika berhasil login
                 }
 
                 elseif($akun['id_akses']=="2"){
         if (isset($_SESSION["cart"]) OR !empty($_SESSION["cart"])) 
     {
-    echo "<script>location='/bismillahok/checkout.php';</script>";
+    echo "<script>location='/mami-j/checkout.php';</script>";
     }
     else
     {
-        echo "<script>location='/bismillahok/index.php';</script>";
+        echo "<script>location='/mami-j/index.php';</script>";
     }
 
                 // header("location:/bismillahok/checkout.php"); //lokasi target jika berhasil login

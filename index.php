@@ -186,8 +186,8 @@ include 'koneksi.php';
                 <span class="flaticon-shipped"></span>
               </div>
               <div class="media-body">
-                <h3 class="heading">Ongkos Kirim Murah</h3>
-                <span>Hanya 5000 untuk sekali Antar</span>
+                  <h3 class="heading">Pembayaran COD</h3>
+                <span>Hanya 5000 Tunggu di Rumah</span>
               </div>
             </div>      
           </div>
@@ -244,12 +244,12 @@ include 'koneksi.php';
 							<div class="col-md-6">
 								<div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url(images/category-1.jpg);">
 									<div class="text px-3 py-1">
-										<h2 class="mb-0"><a href="/bismillahok/yukbelanja.php?id=3">Sayuran</a></h2>
+										<h2 class="mb-0"><a href="/mami-j/yukbelanja.php?id=3">Sayuran</a></h2>
 									</div>
 								</div>
 								<div class="category-wrap ftco-animate img d-flex align-items-end" style="background-image: url(images/category-2.jpg);">
 									<div class="text px-3 py-1">
-										<h2 class="mb-0"><a href="/bismillahok/yukbelanja.php?id=4">Buah</a></h2>
+										<h2 class="mb-0"><a href="/mami-j/yukbelanja.php?id=4">Buah</a></h2>
 									</div>
 								</div>
 							</div>
@@ -259,12 +259,12 @@ include 'koneksi.php';
 					<div class="col-md-4">
 						<div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url(images/shutterstock-568076731.jpg);">
 							<div class="text px-3 py-1">
-								<h2 class="mb-0"><a href="/bismillahok/yukbelanja.php?id=1">Minuman</a></h2>
+								<h2 class="mb-0"><a href="/mami-j/yukbelanja.php?id=1">Minuman</a></h2>
 							</div>		
 						</div>
 						<div class="category-wrap ftco-animate img d-flex align-items-end" style="background-image: url(images/jenis-roti-4-1024x682.jpg);">
 							<div class="text px-3 py-1">
-								<h2 class="mb-0"><a href="/bismillahok/yukbelanja.php?id=2">Roti SIP</a></h2>
+								<h2 class="mb-0"><a href="/mami-j/yukbelanja.php?id=2">Roti SIP</a></h2>
 							</div>
 						</div>
 					</div>
