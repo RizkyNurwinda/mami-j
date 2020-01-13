@@ -215,7 +215,7 @@ $detail = $ambil->fetch_assoc();
 
     <div class="hero-unit" style="margin-left: 200px;">
       <div class="span3" >
-
+<br>  
         <h5>Deskripsi</h5>
         <hr class="soft clr"/>
         
