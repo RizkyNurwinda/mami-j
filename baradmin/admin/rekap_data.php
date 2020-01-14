@@ -149,7 +149,7 @@ include 'koneksi.php';
             $tgl = date('d-m-y', strtotime($_GET['tanggal']));
 
             echo '<b>Data Penjualan Tanggal '.$tgl.'</b><br /><br />';
-            echo '<a href="print.php?filter=1&tanggal='.$_GET['tanggal'].'">Cetak PDF</a><br /><br />';
+            echo '<a href="print.php?filter=1&tanggal='.$_GET['tanggal'].'"class="btn btn-success"><i class="fas fa-print"></i>>Cetak PDF</a><br /><br />';
 
             $query = "SELECT * FROM pembelian, user WHERE pembelian.id_user=user.id_user and DATE(tanggal_beli)='".$_GET['tanggal']."'"; // Tampilkan data transaksi sesuai tanggal yang diinput oleh user pada filter
         }else if($filter == '2'){ // Jika filter nya 2 (per bulan)
@@ -158,14 +158,14 @@ include 'koneksi.php';
 
             echo '<b>Data Penjualan Bulan '.$nama_bulan[$_GET['bulan']].' '.$_GET['tahun'].'</b><br /><br />';
 
-            echo '<a href="print.php?filter=2&bulan='.$_GET['bulan'].'&tahun='.$_GET['tahun'].'">Cetak PDF</a><br /><br />';
+            echo '<a href="print.php?filter=2&bulan='.$_GET['bulan'].'&tahun='.$_GET['tahun'].'"class="btn btn-success"><i class="fas fa-print"></i>>Cetak PDF</a><br /><br />';
 
             $query = "SELECT * FROM pembelian, user WHERE pembelian.id_user=user.id_user and MONTH(pembelian.tanggal_beli)='".$_GET['bulan']."' AND YEAR(pembelian.tanggal_beli)='".$_GET['tahun']."'"; // Tampilkan data transaksi sesuai bulan dan tahun yang diinput oleh user pada filter
         }else{ // Jika filter nya 3 (per tahun)
             echo '<b>Data Penjualan Tahun '.$_GET['tahun'].'</b><br /><br />';
-            echo '<a href="print.php?filter=3&tahun='.$_GET['tahun'].'">Cetak PDF</a><br /><br />';
+            echo '<a href="print.php?filter=3&tahun='.$_GET['tahun'].'" class="btn btn-success"><i class="fas fa-print"></i>>Cetak PDF</a><br /><br />';
 
-            $query = "SELECT * FROM pembelian, user WHERE pembelian.id_user=user.id_user and YEAR(tanggal_periksa)='".$_GET['tahun']."'"; // Tampilkan data transaksi sesuai tahun yang diinput oleh user pada filter
+            $query = "SELECT * FROM pembelian, user WHERE pembelian.id_user=user.id_user and YEAR(tanggal_beli)='".$_GET['tahun']."'"; // Tampilkan data transaksi sesuai tahun yang diinput oleh user pada filter
         }
     }else{ // Jika user tidak mengklik tombol tampilkan
         echo '<b>Semua Data Penjualan</b><br /><br />';
