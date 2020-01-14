@@ -1,6 +1,6 @@
 <?php
 session_start(); //mengawali session
-include "Koneksi.php"; //menghubungkan dg koneksi
+include "koneksi.php"; //menghubungkan dg koneksi
 $error = '';
     if (isset($_POST['submit'])) { 
         $username = $_POST["username"];
@@ -24,22 +24,23 @@ $error = '';
 
                 elseif($akun['id_akses']=="2"){
         if (isset($_SESSION["cart"]) OR !empty($_SESSION["cart"])) 
-    {
-    echo "<script>location='/mami-j/checkout.php';</script>";
-    }
-    else
-    {
-        echo "<script>location='/mami-j/index.php';</script>";
-    }
-
-                // header("location:/bismillahok/checkout.php"); //lokasi target jika berhasil login
+                {
+                echo "<script>location='/mami-j/checkout.php';</script>";
                 }
-               else
+                else
+                {
+                    echo "<script>location='/mami-j/index.php';</script>";
+                }
+
+                            // header("location:/bismillahok/checkout.php"); //lokasi target jika berhasil login
+                            }
+                        }
+    else
     {
 
         echo "<script>alert('gagal login silahkan masuk lagi'); </script>";
-        echo "<script>location='login.php';</script>";
+        echo "<script>location='/mami-j/login/index.php';</script>";
     }
-}
+
 }
 ?>
