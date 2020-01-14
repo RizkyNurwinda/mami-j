@@ -229,32 +229,32 @@ include 'koneksi.php';
     </section>
 
     <section class="ftco-section ftco-no-pb ftco-no-pt bg-light">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-5 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/about.jpg);">
-						
-					</div>
-					<div class="col-md-7 py-5 wrap-about pb-md-5 ftco-animate">
-	          <div class="heading-section-bold mb-4 mt-md-5">
-	          	<div class="ml-md-0">
-		            <h2 class="mb-4">Selamat datang di MAMI-J</h2>
-	            </div>
-	          </div>
-	          <div class="pb-md-5">
-	          	<p>MAMI-J merupakan e-commerce penjualan.</p>
-							<p>MAMI-J melayani order delivery berbagai macam kebutuhan pangan seperti sayuran, buah buahan, susu dan Roti SIP yang tentunya merupakan asli produksi dari beberapa Jurusan yang ada di Politeknik negeri Jember yaitu Jurusan Pertanian dan Peternakan. Kami menawarkan olahan produk yang masih fresh dan tentunya dengan harga yang terjangkau dan barang yang dibeli bisa diantar oleh kurir MAMI-J. </p>
-							<p><a href="yukbelanja.php" class="btn btn-primary">Yuk Belanja</a></p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="margin-left: 100px;">
+            
+          </div>
+          <div class="col-md-7 py-5 wrap-about pb-md-5 ftco-animate">
+            <div class="heading-section-bold mb-4 mt-md-5">
+              <div class="ml-md-0">
+                <h2 class="mb-4">Selamat datang di MAMI-J</h2>
+              </div>
+            </div>
+            <div class="pb-md-5">
+              <p>MAMI-J merupakan e-commerce penjualan.</p>
+              <p>MAMI-J melayani order delivery berbagai macam kebutuhan pangan seperti sayuran, buah buahan, susu dan Roti SIP yang tentunya merupakan asli produksi dari beberapa Jurusan yang ada di Politeknik negeri Jember yaitu Jurusan Pertanian dan Peternakan. Kami menawarkan olahan produk yang masih fresh dan tentunya dengan harga yang terjangkau dan barang yang dibeli bisa diantar oleh kurir MAMI-J. </p>
+              <p><a href="yukbelanjaftfttft.php" class="btn btn-primary">Yuk Belanja</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
 
 <?php
     include "pages/footer.php"; 
     ?>
-		
+    
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
