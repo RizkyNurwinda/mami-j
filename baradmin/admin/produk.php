@@ -108,6 +108,7 @@ include 'koneksi.php';
             <th class="alert alert-info" role="alert">Nama</th>
             <th class="alert alert-info" role="alert">Harga</th>
             <th class="alert alert-info" role="alert">Kategori</th>
+             <th class="alert alert-info" role="alert">Stok</th>
             <th class="alert alert-info" role="alert">Foto</th>
             <th class="alert alert-info" role="alert">Diskripsi</th>
             <th class="alert alert-info" role="alert">Aksi</th>
@@ -123,9 +124,11 @@ include 'koneksi.php';
             <td><?php echo $pecah['nama_produk']; ?></td>
             <td><?php echo $pecah['harga_produk']; ?></td>
             <td><?php echo $pecah['id_kategori']; ?></td>
+            <td><?php echo $pecah['stok_produk']; ?></td>
             <td>
                 <img src="../foto_produk/<?php echo $pecah['foto_produk']; ?>" width="100">
             </td>
+
             <td><?php echo $pecah['deskripsi']; ?></td>
 
             <td>
