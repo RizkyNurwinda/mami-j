@@ -187,7 +187,7 @@ $detail = $ambil->fetch_assoc();
         <form method="post">
         <div class="form-group">
           <div class="input-group">
-            <input type="number" min="1" class="form-control" placeholder="Masukkan jumlah item " name="jumlah">
+            <input type="number" class="form-control" placeholder="input jumlah" required="" name="jumlah" max="<?php echo $detail["stok_produk"];?>">
             </div> 
             <br>
             <div class="input-group-btn">
@@ -202,7 +202,7 @@ $detail = $ambil->fetch_assoc();
           
           $jumlah = $_POST["jumlah"];
           if (empty($jumlah)) {
-            $jumlah=1;
+            $jumlah=0;
           }
         $_SESSION["cart"]["$id_produk"] = $_SESSION["cart"]["$id_produk"] +$jumlah;
         
