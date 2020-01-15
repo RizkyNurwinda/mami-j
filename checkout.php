@@ -225,9 +225,11 @@ if (empty($_SESSION["cart"]) OR !isset($_SESSION["cart"]))
       <input type="text" readonly value="<?php echo $_SESSION["user"]['nomor']?>" class="form-control" style="width:300px">
     </div> 
      <div class="form-group">
-      <label>Opsi Kirim</label>
-      <input type="date" class="form-control" name="tanggal_kirim" required="" style=" width:250px">
-                 <span class="help-block"> <h7>Maks 2 Hari Setelah Checkout</h7></span>
+
+      <label>Opsi Kirim</label> <br>
+     <input type="date" id="datePickerId" max="" name="tanggal_kirim"/>
+        
+                <br> <span class="help-block"> Maks 2 Hari Setelah Checkout </span>
     </div> 
     <label>Tarif Ongkir</label>
                   <select class="form-control" name="id_ongkir" required="" style=" width: 250px">
@@ -315,12 +317,16 @@ if (empty($_SESSION["cart"]) OR !isset($_SESSION["cart"]))
 <br> <br><br> <br>
 				<!-- <?php
     include "pages/footer.php"; 
+   
     ?> -->
 
   <!-- loader -->
    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
-
+<script type="text/javascript">
+   datePickerId.min = new Date().toISOString().split("T")[0];
+  // datePickerId.max= new Date().toISOString().split("T")[0];
+</script>
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
   <script src="js/popper.min.js"></script>
