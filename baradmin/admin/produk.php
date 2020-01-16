@@ -41,9 +41,45 @@ include 'koneksi.php';
 
 </head>
 
-<?php
-    include "pages/header.php"; 
-    ?>
+  <!-- PAGE CONTAINER-->
+        <div class="page-container">
+            <!-- HEADER DESKTOP-->
+            <header class="header-desktop">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="header-wrap">
+                            <form class="form-header" action="" method="POST">
+
+
+
+                                <input class="au-input au-input--xl" type="text" name="search" placeholder="Search for datas" id='input' onkeyup='searchTable()'>
+                               
+                                <button class="au-btn--submit" type="submit">
+                                    <i class="zmdi zmdi-search"></i>
+                                </button> 
+                            
+                              </form>
+                                <div class="account-wrap">
+                                    <div class="account-item clearfix js-item-menu">
+                                        <div class="content">
+                                            <a class="js-acc-btn" href="#">Admin</a>
+                                        </div>
+                                        <div class="account-dropdown js-dropdown">
+                                            <div class="info clearfix">
+                                            <div class="account-dropdown__footer">
+                                                <a href="logout.php">
+                                                    <i class="zmdi zmdi-power"></i>Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- HEADER DESKTOP-->
+
     <?php
     include "pages/sidebar.php"; 
     ?>
@@ -72,6 +108,7 @@ include 'koneksi.php';
             <th class="alert alert-info" role="alert">Nama</th>
             <th class="alert alert-info" role="alert">Harga</th>
             <th class="alert alert-info" role="alert">Kategori</th>
+             <th class="alert alert-info" role="alert">Stok</th>
             <th class="alert alert-info" role="alert">Foto</th>
             <th class="alert alert-info" role="alert">Diskripsi</th>
             <th class="alert alert-info" role="alert">Aksi</th>
@@ -87,9 +124,11 @@ include 'koneksi.php';
             <td><?php echo $pecah['nama_produk']; ?></td>
             <td><?php echo $pecah['harga_produk']; ?></td>
             <td><?php echo $pecah['id_kategori']; ?></td>
+            <td><?php echo $pecah['stok_produk']; ?></td>
             <td>
                 <img src="../foto_produk/<?php echo $pecah['foto_produk']; ?>" width="100">
             </td>
+
             <td><?php echo $pecah['deskripsi']; ?></td>
 
             <td>
@@ -156,6 +195,36 @@ include 'koneksi.php';
     <script src="js/main.js"></script>
 
 </body>
+<script>
+function searchTable() {
+    var input;
+    var saring;
+    var status; 
+    var tbody; 
+    var tr; 
+    var td;
+    var i; 
+    var j;
+    input = document.getElementById("input");
+    saring = input.value.toUpperCase();
+    tbody = document.getElementsByTagName("tbody")[0];;
+    tr = tbody.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td");
+        for (j = 0; j < td.length; j++) {
+            if (td[j].innerHTML.toUpperCase().indexOf(saring) > -1) {
+                status = true;
+            }
+        }
+        if (status) {
+            tr[i].style.display = "";
+            status = false;
+        } else {
+            tr[i].style.display = "none";
+        }
+    }
+}
+</script>
 
 </html>
 <!-- end document-->

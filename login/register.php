@@ -1,6 +1,6 @@
 <?php 
 session_start();
-$koneksi = new mysqli("localhost","root","","db_mamij");
+include 'koneksi.php';
 ?>
 
 <!DOCTYPE html>
@@ -79,31 +79,30 @@ $koneksi = new mysqli("localhost","root","","db_mamij");
 
   </div>
 
-<!--  <?php 
+<?php 
 if (isset($_POST["daftar"]))
  {
- 	$usernama = $_POST["usernama"];
- 	$email = $_POST["email"];
- 	$password= $_POST["password"];
- 	$nomor= $_POST["nomor"];
- 	$akses= $_POST["user"];
-	$ambil = $koneksi->query("SELECT * FROM user WHERE email='$email'");
-	$yangcocok = $ambil->num_rows;
-	if ($yangcocok==1)
-	 {
-		echo "<script>alert('pendaftaran gagal,email sudah digunakan); </script>";
-		echo "<script>location='../login/register.php';</script>";
-	}
-	else
-	{
-		$koneksi->query("INSERT INTO user (email,password,usernama,nomor,akses) VALUES('$email','$password','$usernama','$nomor','$akses')");
-		echo "<script>alert('sukses, silahkan daftar'); </script>";
-		echo "<script>location='../login/index.php';</script>";
-	}
+  $nama = $_POST["username"];
+  $email = $_POST["email"];
+  $password= $_POST["password"];
+  $alamat= $_POST["alamat"];
+  $telepon= $_POST["nomor"];
+  $ambil = $koneksi->query("SELECT * FROM user WHERE email='$email'");
+  $yangcocok = $ambil->num_rows;
+  if ($yangcocok==1)
+   {
+    echo "<script>alert('pendaftaran gagal,email sudah digunakan); </script>";
+    echo "<script>location='../login/index.php';</script>";
+  }
+  else
+  {
+    $koneksi->query("INSERT INTO user (email,password,username,nomor,alamat,id_akses) VALUES('$email','$password','$nama','$telepon','$alamat','2')");
+    echo "<script>alert('sukses, silahkan Login'); </script>";
+    echo "<script>location='../login/index.php';</script>";
+  }
 }
-?>  -->
-
- <?php 
+?>
+ <!-- <?php 
 if (isset($_POST['daftar']))
 {
 	
@@ -115,7 +114,7 @@ if (isset($_POST['daftar']))
 	echo "<script>location='../login/index.php';</script>";
     
  }
-?> 
+?>  -->
 
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>

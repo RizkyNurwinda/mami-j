@@ -79,6 +79,9 @@ include 'koneksi.php';
                 </select>
         </select>
     </div>
+     <label>Stok item</label>
+        <input type="number" class="form-control" name="stok">
+    </div>
     <div class="form-group">
         <label>Foto</label>
         <input type="file" accept="image/*" class="form-control" name="foto">

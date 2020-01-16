@@ -290,7 +290,7 @@ include 'koneksi.php';
                                 // $q = isset($_REQUEST['q']) ? urldecode($_REQUEST['q']) : ''; // untuk keyword pencarian
                                 $page = isset($_GET['page']) ? intval($_GET['page']) : 1; // untuk nomor halaman
                                 $adjacents = isset($_GET['adjacents']) ? intval($_GET['adjacents']) : 3; // khusus style pagination 2 dan 3
-                                $rpp = 10; // jumlah record per halaman
+                                $rpp = 12; // jumlah record per halaman
                                 if (empty($_GET["id"])) {
                                   $sql = "SELECT * FROM produk WHERE nama_produk LIKE '%$q%' ORDER BY nama_produk";
                                  } elseif (isset($_GET["id"])) {
@@ -301,7 +301,7 @@ include 'koneksi.php';
                                // query silahkan disesuaikan
                                 $result = mysqli_query($koneksi, $sql); // eksekusi query
                                 $tcount = mysqli_num_rows($result); // jumlah total baris
-                                $tpages = isset($tcount) ? ceil($tcount / $rpp) : 1; // jumlah total halaman
+                                $tpages = isset($tcount) ? ceil($tcount / $rpp) : 4; // jumlah total halaman
                                 $count = 0; // untuk paginasi
                                 $i = ($page - 1) * $rpp; // batas paginasi
                                 $no_urut = ($page - 1) * $rpp; // nomor urut
