@@ -66,7 +66,7 @@ include 'koneksi.php';
             <th class="alert alert-info" role="alert">username</th>
             <th class="alert alert-info" role="alert">id_pembelian</th>
             <th class="alert alert-info" role="alert">Tanggal Beli</th>
-            <th class="alert alert-info" role="alert">Tanggal Kirim</th>
+          <!--   <th class="alert alert-info" role="alert">Tanggal Kirim</th> -->
             <th class="alert alert-info" role="alert">Total</th>
             <th class="alert alert-info" role="alert">Alamat</th>
              <th class="alert alert-info" role="alert">Status</th>
@@ -82,7 +82,7 @@ include 'koneksi.php';
             <td><?php echo $pecah['username']; ?></td>
             <td><?php echo $pecah['id_pembelian']; ?></td>
             <td><?php echo $pecah['tanggal_beli']; ?></td>
-            <td><?php echo $pecah['tanggal_kirim']; ?></td>
+           <!--  <td><?php echo $pecah['tanggal_kirim']; ?></td> -->
             <td><?php echo $pecah['total']; ?></td>
             <td><?php echo $pecah['alamat']; ?></td>
              <td><?php echo $pecah['status']; ?></td>

@@ -33,35 +33,43 @@
                             <a href="pembelian.php">
                                 <i class="fas fa-shopping-cart"></i>Pemesanan</a>
                         </li>
-                        <li>
-                            <a href="rekap_data.php">
-                                <i class="fas fa-calendar"></i>Laporan</a>
-                        </li>
+                       <!--  <li>
+                            <a href="#">
+                                <i class="fas fa-calendar"></i>Laporan
+                                 <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                <li>
+                                    <a href="rekap_data.php">Keuagan</a>
+                                </li>
+                                <li>
+                                    <a href="register.html">Terlaris</a>
+                                </li>
+                            </ul>
+                        </li> -->
                         <!-- <li>
                             <a href="map.html">
                                 <i class="fas fa-map-marker-alt"></i>Maps</a>
                         </li> -->
-                        <!-- <li class="has-sub">
-                            <a class="js-arrow" href="#">
-                                <i class="fas fa-copy"></i>Pages</a>
-                            <ul class="list-unstyled navbar__sub-list js-sub-list">
+                        <li class="has-sub">
+                           <a href="rekap_data.php">
+                                <i class="fas fa-copy"></i>Laporan</a>
+                            <!-- <ul class="list-unstyled navbar__sub-list js-sub-list">
                                 <li>
-                                    <a href="login.html">Login</a>
+                                    <a href="rekap_data.php">Keuangan</a>
                                 </li>
                                 <li>
-                                    <a href="register.html">Register</a>
+                                    <a href="laris.php">Terlaris</a>
                                 </li>
-                                <li>
+                               <li>
                                     <a href="forget-pass.html">Forget Password</a>
                                 </li>
-                            </ul>
-                        </li> -->
-                        <li class="has-sub">
+                            </ul>  -->
+                        </li>
+                      <!--   <li class="has-sub">
                             <a class="js-arrow" href="#">
                                 <i class="far fa-address-card"></i>Info</a>
                             <ul class="list-unstyled navbar__sub-list js-sub-list">
                             </ul>
-                        </li>
+                        </li> -->
                     </ul>
                 </nav>
             </div>

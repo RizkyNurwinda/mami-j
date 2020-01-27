@@ -192,7 +192,7 @@ if ($idpelangganygbeli!== $idpelangganyglogin) {
     <h3>Pembelian</h3>
     <strong>No.pembelian&nbsp;: <?php echo $detail['id_pembelian'] ?></strong><br>
     Tanggal Pesan&nbsp;&nbsp;: <?php echo $detail['tanggal_beli'] ?><br>
-    Tanggal Kirim&nbsp;&nbsp;&nbsp;&nbsp;: <?php echo $detail['tanggal_kirim'] ?><br>
+   <!--  Tanggal Kirim&nbsp;&nbsp;&nbsp;&nbsp;: <?php echo $detail['tanggal_kirim'] ?><br> -->
   </div>
 
   <div class="span4" style="margin-left: 100px;">

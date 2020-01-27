@@ -179,7 +179,8 @@ if (!isset($_SESSION["user"]) OR empty($_SESSION["user"]))
             <tr>
               <th>No</th>
               <th><center>Tanggal Pesan</center></th>
-              <th><center>Tanggal Acara</center></th>
+              <th><center>Alamat</center></th>
+              <th><center>Kota</center></th>
               <th><center>Total</center></th>
               <th><center>Opsi</center></th>
               <th><center>Status</center></th>
@@ -198,7 +199,9 @@ if (!isset($_SESSION["user"]) OR empty($_SESSION["user"]))
             <tr>
               <td><?php echo $nomor; ?></td>
               <td><center><?php echo$pecah["tanggal_beli"] ?></center></td>
-              <td><center><?php echo $pecah["tanggal_kirim"] ?></center></td>
+               <td><center><?php echo$pecah["alamat"] ?></center></td>
+                <td><center><?php echo$pecah["nama_kota"] ?></center></td>
+             <!--  <td><center><?php echo $pecah["tanggal_kirim"] ?></center></td> -->
               
               <td><center>Rp. <?php echo number_format($pecah["total"]) ?></center></td>
               <td>

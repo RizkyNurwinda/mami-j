@@ -224,13 +224,13 @@ if (empty($_SESSION["cart"]) OR !isset($_SESSION["cart"]))
       <label>Telepon</label>
       <input type="text" readonly value="<?php echo $_SESSION["user"]['nomor']?>" class="form-control" style="width:300px">
     </div> 
-     <div class="form-group">
+     <!-- <div class="form-group">
 
       <label>Opsi Kirim</label> <br>
-     <input type="date" id="datePickerId" max="" name="tanggal_kirim"/>
+     <input type="date" id="datePickerId" max="" name="tanggal_kirim" max="today"/>
         
                 <br> <span class="help-block"> Maks 2 Hari Setelah Checkout </span>
-    </div> 
+    </div>  -->
     <label>Tarif Ongkir</label>
                   <select class="form-control" name="id_ongkir" required="" style=" width: 250px">
                    <option value=""> pilih kiriman</option>
